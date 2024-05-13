@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container ">
+        <header class="header">
+            <h1 id="title">
+                SURVEY ON PEOPLE LIFESTYLE PREFERENCE
+            </h1>
+            <p id="description"><br>
+                Thank you for taking the time to help us to improve the plateform
+            </p>
+        </header>
+        <form action="process-form.php" method="post" id="survey-form">
+
+            <!-- Text section -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="formControl" placeholder="Enter your name" required>
+            </div><br>
+            <!-- end of text section -->
+
+            <!-- Type Email section -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="formControl" placeholder="Enter your Email" required>
+            </div><br>
+            <!-- end of Email section -->
+
+            <!-- Type Number section -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="number" name="phone" id="phone" class="formControl" placeholder="Enter your phone number" required>
+            </div><br>
+            <!-- end of Number section -->
+
+            <!-- Type Number section -->
+            <div class="form-group">
+                <label for="address">Address <span class="clue">(optional)</span></label>
+                <input type="text" name="address" id="address" class="formControl" placeholder="Enter your address">
+            </div>
+          
+            <div class="form-group">
+                <p id="quest">Which age group do you fall under </p>
+                <select name="age_group" required id="dropdown" class="formControl">
+                    <option value disabled selected >Select age group</option>
+                    <option value="Young_Adults">Young Adults</option>
+                    <option value="Middle_Aged Adults">Middle Aged Adult</option>
+                    <option value="Old_Adults">Old Adults</option>
+                </select>
+            </div>
+           
+            <div class="form-group">
+               
+                <fieldset>
+                    <legend>Choose Lifestyle Preferences</legend>
+                   <label for="">
+                    <input type="radio" name="type" value="1">
+                     Diet
+                </label>
+                <br>
+                <label for="">
+                    <input type="radio" name="type" value="2">
+                    physical Activity
+                </label>
+                <br>
+                <label for="">
+                    <input type="radio" name="type" value="3">
+                    Mental Stimulation
+                </label>
+                <br>
+                <label for="">
+                    <input type="radio" name="type" value="4">
+                   Medical Awareness
+                </label> 
+            </fieldset> 
+            </div>
+            
+            
+            
+            <div class="form-group">
+                <p id="quest">Give us your feedback</p>
+                <textarea name="feedback"  cols="30" rows="5"  id="feedback" class="textarea" placeholder="Enter your feedback here..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
